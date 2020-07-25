@@ -34,6 +34,9 @@ align-items: center
 
 export const NamePeople = styles.Text`
 text-align:center
+font-size:16px
+color: #081C81
+font-weight: bold
 `;
 
 export const Around = styles.View`
@@ -41,7 +44,7 @@ width: 65%
 height: 65%
 padding: 2px 2px 2px 2px
 border-width: 0.2px
-border-radius: 10px
+border-radius: 25px
 border-color: #ffff
 justify-content:center
 align-content:center

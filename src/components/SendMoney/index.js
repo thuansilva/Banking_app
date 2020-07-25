@@ -16,6 +16,8 @@ const SendMoney = () => (
 
                 </People>
                 <People>
+                    <Around>
+                    </Around>
                     <NamePeople>Maria</NamePeople>
                 </People>
                 <People>
