@@ -1,13 +1,12 @@
 import styles from 'styled-components/native';
 import { LinearGradient } from 'expo-linear-gradient';
 
-export const Header = styles.View`
-align-items:center
-flex-direction: row
-justify-content: space-between
-padding: 30px 30px 0px 30px
+export const Icon = styles.Image.attrs({
+    resizeMode: 'contain'
+})`
+width: 18px
+height: 20px
 `;
-
 export const Carrousel = styles.View`
 `;
 
@@ -21,8 +20,8 @@ margin-top: 50px
 
 export const Card = styles(LinearGradient).attrs({
     colors: ['#f9d56e', '#df5e88', '#111d5e'],
-    start: { x: 0, y: 1 },
-    end: { x: 1, y: 0 },
+    start: { x: 1, y: 0 },
+    end: { x: 0, y: 1 },
 })`
 width: 190px
 height: 230px
@@ -66,7 +65,8 @@ export const TextData = styles.Text`
 font-family: Roboto-thin
 font-size: 12px;
 opacity: 0.6;
-color: #6F8099
+color: ${props => props.colortextcizna ? '#6F8099' : '#fff'}
+
 `;
 export const Text = styles.Text`
 color: ${props => props.colortextprimary ? '#081C81' : '#fff'}

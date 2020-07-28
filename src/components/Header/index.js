@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '@expo/vector-icons/FontAwesome5';
+import { Icon } from './styles'
 
 import { HeaderItem } from './styles'
 
@@ -7,8 +7,8 @@ import { HeaderItem } from './styles'
 const Header = () => (
     <>
         <HeaderItem>
-            <Icon name="ellipsis-v" size={18} color="#FFFFFF" />
-            <Icon name="search" size={18} color="#FFFFFF" />
+            <Icon source={require('../../assets/quad.png')} />
+            <Icon source={require('../../assets/search.png')} />
         </HeaderItem>
     </>
 

@@ -49,5 +49,12 @@ border-color: #ffff
 justify-content:center
 align-content:center
 align-items:center
-
 `;
+
+export const Photo = styles.Image.attrs({
+    resizeMode: 'contain',
+})`
+height: 60%;
+width: 60%;
+`;
+// background-color: #c4c
