@@ -1,13 +1,15 @@
 import styles from 'styled-components/native';
 import { LinearGradient } from 'expo-linear-gradient';
 
+
+export const Carrousel = styles.View`
+`;
+
 export const Icon = styles.Image.attrs({
     resizeMode: 'contain'
 })`
 width: 18px
 height: 20px
-`;
-export const Carrousel = styles.View`
 `;
 
 export const Scroll = styles.ScrollView.attrs({

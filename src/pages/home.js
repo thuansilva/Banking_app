@@ -1,17 +1,19 @@
 import React from 'react';
-import { Container } from './styles'
-import Icon from '@expo/vector-icons/FontAwesome5';
 
-import Header from '../components/Header';
+import Header from '../components/Header'
 import CardScroll from '../components/Card'
 import SendMoney from '../components/SendMoney'
+import History from '../components/History'
+import { Container } from './styles'
 
 const Home = () => (
     <Container >
         <Header />
         <CardScroll />
         <SendMoney />
+        <History />
     </Container >
 
 );
+
 export default Home;
