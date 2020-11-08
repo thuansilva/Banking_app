@@ -3,11 +3,10 @@ import React from 'react';
 import { AntDesign, Foundation } from '@expo/vector-icons';
 import { HeaderHistoryIcon, ContainerHystory, HeaderHistory, TextHistory, Content } from "./styles"
 import { Animated } from 'react-native'
-import { PanGestureHandler } from 'react-native-gesture-handler';
-
-
+import { PanGestureHandler,State } from 'react-native-gesture-handler';
 
 const History = () => {
+    let offset= 0;
 
     const translateY = new Animated.Value(0)
     const animatedEvent = Animated.event(
@@ -23,19 +22,43 @@ const History = () => {
         }
     )
     function onHandlerStateChanged(event) {
-        console.log(event);
+        let opened = false;
+        
 
+         if(event.nativeEvent.oldState == State.ACTIVE){
+             const {translationY}= event.nativeEvent;
+             offset +=translationY
+    
+             if(translationY >= 50){
+                 opened =true;
+             }else{
+                 translateY.setValue(offset);
+                 translateY.setOffset(0);
+                offset = 0;
+             }
+
+             Animated.timing(translateY,{
+                toValue:opened ? 200: 0,
+                duration: 200,
+                useNativeDriver:true,
+            }).start(()=>{
+                offset = opened ? 200 : 0
+                translateY.setOffset(offset);
+                translateY.setValue(0);
+              
+            });
+         }
 
     }
 
     return (
         <Content>
             <PanGestureHandler onGestureEvent={animatedEvent} onHandlerStateChange={onHandlerStateChanged} >
-                <ContainerHystory styles={{
+                <ContainerHystory style={{
                     transform: [{
                         translateY: translateY.interpolate({
-                            inputRange: [0, 380],
-                            outputRange: [0, 380],
+                            inputRange: [-350,0, 300],
+                            outputRange: [-50,0, 200],
                             extrapolate: "clamp"
                         }),
                     }]

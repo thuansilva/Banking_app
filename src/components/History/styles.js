@@ -2,12 +2,15 @@ import styles from "styled-components/native"
 import { Animated } from "react-native"
 
 export const Content = styles.View`
-flex: 1
 max-height: 500px
-z-index: 5;
+flex: 1
+z-index: 2
+
 `;
 
-export const ContainerHystory = styles(Animated.View)`
+export const ContainerHystory =  styles(Animated.View)`
+flex: 1
+z-index: 1
 background-color: #fff
 position: absolute
 border-radius: 15px
@@ -16,7 +19,7 @@ margin: 0 20px
 height: 100%
 left: 0
 right: 0
-top: 0
+top: -90px
 `;
 
 export const HeaderHistoryIcon = styles.View`
