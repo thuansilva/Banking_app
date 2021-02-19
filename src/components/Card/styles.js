@@ -1,29 +1,28 @@
-import styles from 'styled-components/native';
-import { LinearGradient } from 'expo-linear-gradient';
-
+import styles from "styled-components/native";
+import { LinearGradient } from "expo-linear-gradient";
 
 export const Carrousel = styles.View`
 `;
 
 export const Icon = styles.Image.attrs({
-    resizeMode: 'contain'
+  resizeMode: "contain",
 })`
-width: 18px
-height: 20px
+width: 40px
+height: 30px
 `;
 
 export const Scroll = styles.ScrollView.attrs({
-    horizontal: true,
-    showsHorizontalScrollIndicator: false,
-    contentContainerStyle: { paddingLeft: 50, paddingRight: 5 }
+  horizontal: true,
+  showsHorizontalScrollIndicator: false,
+  contentContainerStyle: { paddingLeft: 50, paddingRight: 5 },
 })`
 margin-top: 50px
 `;
 
 export const Card = styles(LinearGradient).attrs({
-    colors: ['#f9d56e', '#df5e88', '#111d5e'],
-    start: { x: 1, y: 0 },
-    end: { x: 0, y: 1 },
+  colors: ["#f9d56e", "#df5e88", "#111d5e"],
+  start: { x: 1, y: 0 },
+  end: { x: 0, y: 1 },
 })`
 width: 190px
 height: 230px
@@ -45,7 +44,7 @@ align-content:center
 export const Value = styles.Text`
 font-family: Roboto-medium
 font-size: 28px;
-color: ${props => props.colortextsecundary ? '#030710' : '#ffffff'}
+color: ${(props) => (props.colortextsecundary ? "#030710" : "#ffffff")}
 font-weight: bold
 
 `;
@@ -54,7 +53,7 @@ export const CardType = styles.Text`
 font-family: Roboto-thin
 font-size: 17px;
 padding-top:5px
-color: ${props => props.colortextterciary ? '#6F8099' : '#fff'}
+color: ${(props) => (props.colortextterciary ? "#6F8099" : "#fff")}
 `;
 
 export const Footer = styles.View`
@@ -67,14 +66,14 @@ export const TextData = styles.Text`
 font-family: Roboto-thin
 font-size: 12px;
 opacity: 0.6;
-color: ${props => props.colortextcizna ? '#6F8099' : '#fff'}
+color: ${(props) => (props.colortextcizna ? "#6F8099" : "#fff")}
 
 `;
 export const Text = styles.Text`
-color: ${props => props.colortextprimary ? '#081C81' : '#fff'}
+color: ${(props) => (props.colortextprimary ? "#081C81" : "#fff")}
 font-family: Roboto-thin
 font-size: 17px;
-`
+`;
 
 export const CardCredit = styles.View` 
 background-color:#ffff

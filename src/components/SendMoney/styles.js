@@ -1,5 +1,4 @@
-import styles from 'styled-components/native';
-
+import styles from "styled-components/native";
 
 export const CardPeople = styles.View`
 margin-top: 35px
@@ -16,16 +15,15 @@ text-align: center
 `;
 
 export const ScrollPeople = styles.ScrollView.attrs({
-    horizontal: true,
-    showsHorizontalScrollIndicator: false,
-    contentContainerStyle: { paddingLeft: 10, paddingRight: 5 }
-
+  horizontal: true,
+  showsHorizontalScrollIndicator: false,
+  contentContainerStyle: { paddingLeft: 10, paddingRight: 5 },
 })``;
 
 export const People = styles.View`
 width:100px
 height: 100px
-background-color: ${props => props.colortextprimary ? '#081C81' : '#ffffff'}
+background-color: ${(props) => (props.colortextprimary ? "#081C81" : "#ffffff")}
 border-radius: 10px
 margin: 0px 5px
 justify-content:center
@@ -52,7 +50,7 @@ align-items:center
 `;
 
 export const Photo = styles.Image.attrs({
-    resizeMode: 'contain',
+  resizeMode: "contain",
 })`
 height: 60%;
 width: 60%;
